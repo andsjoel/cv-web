@@ -10,18 +10,32 @@ import Contact from '../sections/Contact/Contact';
 
 const Portfolio = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+    const [cursorWhere, setCursorWhere] = useState(false);
     
-
-
     const clickTag = (e) => {      
         const scrollTop = e.target.scrollTop;
         setIsVisible(scrollTop > 100);
     };
 
+    const handleMouseMove = (e) => {
+        const posX = e.clientX;
+        const posY = e.clientY;
+        setCursorPosition({ x: posX, y: posY });
+      };
+  
+      window.addEventListener("mousemove", handleMouseMove);
+
+      const wheresMouse = (wheres) => {
+        setCursorWhere(wheres);
+      }
+
 
   return (
     <main onScroll={ clickTag } id="main">
-        <Header isVisible={isVisible} />
+        <div style={{left: `${cursorPosition.x}px`, top: `${cursorPosition.y}px`}} className="cursor-dot"></div>
+        <div style={{left: `${cursorPosition.x}px`, top: `${cursorPosition.y}px`}} className={`cursor-outline ${cursorWhere ? 'cursor-in' : ''}`}></div>
+        <Header isVisible={isVisible} wheresMouse={wheresMouse} />
         <Home />
         <About />
         <Skills />

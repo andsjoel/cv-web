@@ -24,7 +24,7 @@
 }
 
 :root {
-  --bg: #100c1d;
+  --bg: #17102e;
 }
 
 ::-webkit-scrollbar-track {
@@ -49,7 +49,8 @@
 }
 
 body {
-  background: var(--bg);
+  /* background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(52, 105, 141) 100%); */
+  background-color: var(--bg);
   overflow-x: hidden;
 }
 
@@ -67,10 +68,10 @@ main::before {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url('./assets/images/noise.jpg') repeat center;
+  background: url('./assets/images/noise3.jpg') repeat center;
   mix-blend-mode: screen;
-  opacity: .1;
-  animation: noiseEffect 2s steps(10) infinite;
+  opacity: .3;
+  animation: noiseEffect 1s steps(10) infinite;
   z-index: -1;
 }
 

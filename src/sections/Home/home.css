@@ -1,9 +1,20 @@
 #home {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 90vh;
     font-family: 'lineNexa';
     position: relative;
+}
+
+.name-one {
+    position: absolute;
+    width: 95vw;
+    opacity: .5;
+}
+
+.name-two {
+    position: absolute;
+    width: 95vw;
+    opacity: .5;
 }
