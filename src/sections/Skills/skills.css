@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* min-height: 100vh; */
-    min-width: 100vw;
     font-family: 'lineNexa';
     position: relative;
+    background: linear-gradient(180deg, rgba(52, 105, 141) 0%, rgb(52, 105, 141, 0) 100%);
+    height: 800px;
 }
