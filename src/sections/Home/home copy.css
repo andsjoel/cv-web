@@ -1,0 +1,76 @@
+#home {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* padding-top: 100px; */
+    height: 100vh;
+    font-family: 'lineNexa';
+    position: relative;
+}
+
+.name-dome {
+    position: absolute;
+    width: 90%;
+    opacity: .8;
+    z-index: 5;
+    pointer-events: inherit;
+    max-width: 2000px;
+}
+
+.div-controller {
+    /* position: relative; */
+    /* width: 100%; */
+    /* opacity: .5; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: red;
+}
+
+.name-one {
+    position: absolute;
+    width: 90%;
+    opacity: .5;
+    pointer-events: inherit;
+    max-width: 2000px;
+}
+
+.name-two {
+    position: absolute;
+    width: 90%;
+    opacity: .5;
+    pointer-events: inherit;
+    max-width: 2000px;
+}
+
+.div-controller-two {
+    position: absolute;
+    top: 50%;
+}
+
+.div-controller-two a {
+    /* background-color: red; */
+}
+
+.div-controller-two a img {
+    width: 80px;
+}
+
+/* .home-menu {
+    width: 25%;
+    height: 30%;
+    border: 1px solid wheat;
+    position: absolute;
+    right: 200px;
+    bottom: 20%;
+    color: #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-menu .icon-insta {
+    width: 80px;
+    color: #e8e8e8e;
+} */

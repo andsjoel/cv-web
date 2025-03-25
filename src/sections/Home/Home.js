@@ -1,51 +1,39 @@
-import React, { useState, useEffect, useRef } from 'react';
-import './home.css';
-import nameDome from "../../assets/images/name_dome.png";
-import nameDomeOne from "../../assets/images/name_dome1.png";
-import nameDomeTwo from "../../assets/images/name_dome2.png";
-import iconInsta from "../../assets/images/icons/icon-insta_1.png";
-import iconGithub from "../../assets/images/icons/icon-github_1.png";
+import React, { useState } from "react";
+import "./home.css";
 
 const Home = () => {
-    const [isClicked, setIsClicked] = useState(false);
-    const positionRef = useRef({ x: 0, y: 0 });
-    const nameTwoRef = useRef(null);
+    const [eyePosition, setEyePosition] = useState({ x: 0, y: 0 });
 
-    useEffect(() => {
-        const handleMouseMove = (e) => {
-            const x = (e.clientX - window.innerWidth / 2) / 50;
-            const y = (e.clientY - window.innerHeight / 2) / 50;
-            positionRef.current = { x, y };
+    const handleMouseMove = (e) => {
+        const { clientX, clientY } = e;
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
 
-            if (nameTwoRef.current) {
-                nameTwoRef.current.style.transform = `translate(${x}px, ${y}px)`;
-            }
-        };
+        // Normalizando o deslocamento dentro do olho
+        const offsetX = (clientX - centerX) / 35;  
+        const offsetY = (clientY - centerY) / 35;  
 
-        window.addEventListener("mousemove", handleMouseMove);
-        return () => window.removeEventListener("mousemove", handleMouseMove);
-    }, []);
+        setEyePosition({ x: offsetX, y: offsetY });
+    };
 
-    const handleMouseDown = () => setIsClicked(true);
-    const handleMouseUp = () => setIsClicked(false);
     return (
-        <section id='home' 
-                 onMouseDown={handleMouseDown}
-                 onMouseUp={handleMouseUp}
-        >
-            {isClicked && <img className='name-dome' alt='logo com nome domenico' src={nameDome} draggable="false" />}
-            
-            <div className='div-controller' draggable="false">
-                <img className='name-one' alt='logo com nome domenico' src={nameDomeOne} draggable="false" />
-                <img className='name-two' alt='logo com nome domenico' src={nameDomeTwo} ref={nameTwoRef} draggable="false" />
-                
-                <div className='div-controller-two'>
-                    <a>
-                        <img className='icon-insta' src={ iconInsta } />
-                    </a>
-                    <a>
-                        <img className='icon-insta' src={ iconGithub } />
-                    </a>
+        <section id="home" onMouseMove={handleMouseMove}>            
+            <div className="letters">
+                <div className="words word-dome">
+                    <div className="letter-d"><p>D</p></div>
+                    <div className="letter-o">
+                        <div className="eye" style={{ transform: `translate(-50%, -50%) translate(${eyePosition.x}px, ${eyePosition.y}px)` }}></div>
+                    </div>
+                    <div className="letter-m"><p>M</p></div>
+                    <div className="letter-e"><p>Ê</p></div>
+                </div>
+                <div className="words word-nico">
+                    <div className="letter-n"><p>N</p></div>
+                    <div className="letter-i"><p>I</p></div>
+                    <div className="letter-c"><p>C</p></div>
+                    <div className="letter-o">
+                        <div className="eye" style={{ transform: `translate(-50%, -50%) translate(${eyePosition.x}px, ${eyePosition.y}px)` }}></div>
+                    </div>
                 </div>
             </div>
         </section>

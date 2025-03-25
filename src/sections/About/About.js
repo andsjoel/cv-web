@@ -9,7 +9,7 @@ const About = () => {
         <h2><span>/</span>quem sou eu?</h2>
         <div className='about-content'>
           <div className='about-left'>
-            <p className='about-left-text'>estudante multidisciplinar. Desenvolvedor web, ilustrador e tatuador, unindo arte e tecnologia para transformar ideias em realidade.</p>
+            <p className='about-left-text'>estudante multidisciplinar. Desenvolvedor web, ilustrador e tatuador unindo arte e tecnologia para transformar ideias em realidade.</p>
             <div className='tags'>
               <p><span>#</span>arte</p>
               <p><span>#</span>código</p>
