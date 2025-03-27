@@ -11,9 +11,7 @@
 
 .letters {
     position: relative;
-    /* height: 100vh; */
     display: flex;
-    /* flex-direction: column; */
     padding: 0 10px;
     justify-content: center;
     align-items: center;
@@ -21,8 +19,6 @@
     font-size: 300px;
     cursor: default;
     opacity: .8;
-    border: 1px solid white;
-    /* background: url(https://images.unsplash.com/photo-1530533609496-06430e875bbf?w=1600) center/cover; */
 }
 
   
@@ -157,8 +153,7 @@
   .stylish-text {
     display: grid;
     place-content: center;
-    font-size: clamp(80px, 20vw, 300px);
-    font-family: 'Forta';
+    font-size: 300px;
     width: 100vw;
     height: 100vh;
     color: transparent;
@@ -166,7 +161,6 @@
     mix-blend-mode: screen;
     background: 
       linear-gradient(var(--dynamic-angle), #fff 50%, transparent 50.5%) text,
-      linear-gradient(var(--dynamic-angle), rgba(0, 0, 0, 0.8) 50%, transparent 50.5%)
-      
+      linear-gradient(var(--dynamic-angle), rgba(0, 0, 0, 0.8) 50%, transparent 50.5%);
   }
   
