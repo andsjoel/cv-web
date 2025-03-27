@@ -1,12 +1,11 @@
 .header {
-    display: flex;
     justify-content: center;
     width: 100vw;
     height: 82px;
     position: absolute;
-    top: 85%;
+    top: -100px;
     z-index: 999;
-    transition: bottom .5s ease-in-out;
+    /* transition: top 1s ease-in-out; */
     font-family: 'lineNexa';
     font-weight: bold;
     backdrop-filter: none;
@@ -51,7 +50,7 @@
 
 .normal-header {
     top: 0;
-    transition: top .2s ease-in-out;
+    transition: top .5s ease-in-out;
     backdrop-filter: blur(8px);
     border-bottom: 1px dashed black;
     justify-content: start;

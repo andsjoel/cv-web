@@ -25,7 +25,7 @@ const Header = ({ isVisible, wheresMouse }) => {
             <li><a onMouseEnter={ mouseOn } onMouseLeave={ mouseOff } href='#exp'>Experiência</a></li>
             <li><a onMouseEnter={ mouseOn } onMouseLeave={ mouseOff } href='#projects'>Projetos</a></li>
             <li><a onMouseEnter={ mouseOn } onMouseLeave={ mouseOff } href='#contact'>Contato</a></li>
-            <div className='home-menu'>
+            {/* <div className='home-menu'>
                 <a>
                     <span>→</span>
                     veja um resumo
@@ -40,7 +40,7 @@ const Header = ({ isVisible, wheresMouse }) => {
                     </a>
                 </div>
                 
-            </div>
+            </div> */}
         </ul>
     </nav>
   );
